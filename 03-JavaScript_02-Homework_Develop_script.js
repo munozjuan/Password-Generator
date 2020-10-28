@@ -11,6 +11,13 @@ var checkLowercase;
 var checkSpecial;
 
 
+//first I want to make sure I ask for the length of the password
+function chooseLenght(){
+  passwordLength = prompt("How many characters would you like your password to be? (between 8-128 characters)  ");
+
+}
+
+
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
