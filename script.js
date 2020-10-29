@@ -115,7 +115,7 @@ function generatePassword(){
   showUppercase();
   console.log(checkUppercase);
   addNumbers();
-  console.log(numbers);
+  console.log(nnumberCheck);
   determineSpecial();
   console.log(checkSpecial);
 
@@ -123,10 +123,13 @@ function generatePassword(){
 
   var characters = lowercase;
   var password = "";
-  if(checkUppercase && numbers && checkSpecial){
+  if(checkUppercase && numberCheck && checkSpecial){
     characters += uppercase + numbers + specialCharacter;
   
-  }else if(checkUppercase && numbers){
+  }else if(checkUppercase && numberCheck){
+    characters += numbers + specialCharacter;
+
+  }else if(numberCheck && checkSpecial){
     characters += numbers + specialCharacter;
 
   }else if(checkUppercase && specialCharacter){
@@ -135,9 +138,17 @@ function generatePassword(){
   }else if(checkUppercase){
     characters += uppercase;
 
-  }else if(numbers){
+  }else if(numberCheck){
+    characters += numbers;
 
+  }else if(checkSpecial){
+    characters += specialCharacter;
+
+  }else{
+    characters === lowercase;
   }
+
+  
 
 
 
