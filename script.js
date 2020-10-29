@@ -35,11 +35,20 @@ function chooseLenght(){
     return passwordLength;
   }
 
+  //function to see if they want uppercase
+function uppercaseCheck(){
+  checkUppercase = prompt("Would you like uppercare letters?  \n(Yes or No");
+    checkUppercase = checkUppercase.toLocaleLowerCase()
+}
+
+
+
+
   
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
-
+  password= "";
   var passwordText = document.querySelector("#password");
   passwordText.value = password;
 
