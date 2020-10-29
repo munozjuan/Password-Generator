@@ -36,14 +36,14 @@ function chooseLenght(){
   }
 
   //function to see if they want uppercase
-function uppercaseCheck(){
-  checkUppercase = prompt("Would you like uppercare letters?  \n(Yes or No");
+function showUppercase(){
+  checkUppercase = prompt("Would you like uppercare letters?  \n(Yes or No)");
     checkUppercase = checkUppercase.toLowerCase();
 
     //makes sure you answer the question
     if (checkUppercase === null || checkUppercase ===""){
       alert("Yes or No");
-      uppercaseCheck();
+      showUppercase();
 
     }else if (checkUppercase === "yes" || checkUppercase ==="y"){
       checkUppercase = true;
@@ -54,7 +54,7 @@ function uppercaseCheck(){
       return checkUppercase;
     }else {
       alert("Yes or No");
-      uppercaseCheck();
+      showUppercase();
     }
     return checkUppercase;
 
@@ -84,17 +84,53 @@ function addNumbers(){
     return numbers;
 }
 
+//Function to see if user wants special char
+function determineSpecial(){
+  checkSpecial = prompt("Do you want to include special characters in your password? \n(Yes or No)");
+    checkSpecial = scheckSpecial.toLowerCase();
 
+    if (checkSpecial === null || checkSpecial === ""){
+      alert("Please answer Yes or No");
+      determineSpecial();
+
+    }else if (checkSpecial === "yes" || checkSpecial ==="y"){
+      checkSpecial = true;
+      return checkSpecial;
+
+    }else if (checkSpecial === "no" || checkSpecial ==="n"){
+      checkSpecial = false;
+      return checkSpecial;
+    
+    }else {
+      alert("Please answer Yes or No");
+      determineSpecial();
+    }
+    return checkSpecial;
+}
+
+
+function generatePassword(){
+  chooseLenght();
+  console.log(passwordLength);
+  showUppercase();
+  console.log(checkUppercase);
+  addNumbers();
+  console.log(numbers);
+  determineSpecial();
+  console.log(specialCheck);
+
+
+}
 
 
   
 // Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  password= "";
-  var passwordText = document.querySelector("#password");
-  passwordText.value = password;
 
+function writePassword() {
+  var password1 = "";
+  password1 = generatePassword();
+  var passwordText = document.querySelector("#password");
+  passwordText.value = password1;
 }
 
 // Add event listener to generate button
