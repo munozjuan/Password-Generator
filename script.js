@@ -108,7 +108,7 @@ function determineSpecial(){
     return checkSpecial;
 }
 
-
+// function to generate password
 function generatePassword(){
   chooseLenght();
   console.log(passwordLength);
@@ -117,7 +117,20 @@ function generatePassword(){
   addNumbers();
   console.log(numbers);
   determineSpecial();
-  console.log(specialCheck);
+  console.log(checkSpecial);
+
+  //
+
+  var characters = lowercase;
+  var password = "";
+  if(checkUppercase && numbers && checkSpecial){
+    characters += uppercase + numbers + specialCharacter;
+  
+  }else if(checkUppercase && numbers){
+    characters += numbers + specialCharacter;
+    
+  }
+
 
 
 }
