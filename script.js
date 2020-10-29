@@ -128,6 +128,12 @@ function generatePassword(){
   
   }else if(checkUppercase && numbers){
     characters += numbers + specialCharacter;
+
+  }else if(checkUppercase && specialCharacter){
+    characters += uppercase + specialCharacter;
+
+  }else if(checkUppercase){
+    characters += uppercase;
     
   }
 
