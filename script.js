@@ -28,7 +28,7 @@ function chooseLenght(){
       //if they do not choose any leght this will display aka not a number
     }else if (isNaN(passwordLength)){
       alert("Password needs to be 8-128 characters!");
-      determineLength();
+      chooseLenght();
     }else{
     alert("The next screens will ask you what types of characters you want in your password.\nIf you choose 'No' for all, your password will only contain lowercase letters.");
     }
@@ -63,7 +63,7 @@ function showUppercase(){
 //check to see if user wants to use numbers in the password
 function addNumbers(){
   numberCheck = prompt("Numbers in your password? \n(Yes or No)");
-    numberCheck = nnumberCheck.toLowerCase();
+    numberCheck = numberCheck.toLowerCase();
 
     if (numberCheck === null || numberCheck === ""){
       alert("Yes or No");
@@ -87,7 +87,7 @@ function addNumbers(){
 //Function to see if user wants special char
 function determineSpecial(){
   checkSpecial = prompt("Do you want to include special characters in your password? \n(Yes or No)");
-    checkSpecial = scheckSpecial.toLowerCase();
+    checkSpecial = checkSpecial.toLowerCase();
 
     if (checkSpecial === null || checkSpecial === ""){
       alert("Please answer Yes or No");
@@ -115,11 +115,11 @@ function generatePassword(){
   showUppercase();
   console.log(checkUppercase);
   addNumbers();
-  console.log(nnumberCheck);
+  console.log(numberCheck);
   determineSpecial();
   console.log(checkSpecial);
 
-  //
+  //use if & else if statments to make new password
 
   var characters = lowercase;
   var password = "";
@@ -132,7 +132,7 @@ function generatePassword(){
   }else if(numberCheck && checkSpecial){
     characters += numbers + specialCharacter;
 
-  }else if(checkUppercase && specialCharacter){
+  }else if(checkUppercase && checkSpecial){
     characters += uppercase + specialCharacter;
 
   }else if(checkUppercase){
@@ -148,12 +148,11 @@ function generatePassword(){
     characters === lowercase;
   }
 
-  
-
-
-
+  for(var i = 0; i < passwordLength; i++){
+    password += characters.charAt(Math.floor(Math.random() * characters.length));
+  }
+  return password;
 }
-
 
   
 // Write password to the #password input
