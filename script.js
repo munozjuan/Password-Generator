@@ -38,7 +38,7 @@ function chooseLenght(){
   //function to see if they want uppercase
 function uppercaseCheck(){
   checkUppercase = prompt("Would you like uppercare letters?  \n(Yes or No");
-    checkUppercase = checkUppercase.toLocaleLowerCase();
+    checkUppercase = checkUppercase.toLowerCase();
 
     //makes sure you answer the question
     if (checkUppercase === null || checkUppercase ===""){
@@ -53,11 +53,35 @@ function uppercaseCheck(){
       checkUppercase = false;
       return checkUppercase;
     }else {
-      alert("Please answer Yes or No");
+      alert("Yes or No");
       uppercaseCheck();
     }
     return checkUppercase;
 
+}
+
+//check to see if user wants to use numbers in the password
+function addNumbers(){
+  numbers = prompt("Numbers in your password? \n(Yes or No)");
+    numbers = numbers.toLowerCase();
+
+    if (numbers === null || numbers === ""){
+      alert("Yes or No");
+      addNumbers();
+
+    }else if (numbers === "yes" || numbers ==="y"){
+      numbers = true;
+      return numbers;
+
+    }else if (numbers === "no" || numbers ==="n"){
+      numbers = false;
+      return numbers;
+    
+    }else {
+      alert("Yes or No");
+      addNumbers();
+    }
+    return numbers;
 }
 
 
