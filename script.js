@@ -7,7 +7,7 @@ var lowercase = "abcdefghijklmnopqrstuvwxyz";
 var uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var passwordLength;
 var checkUppercase;
-var checkLowercase;
+var numberCheck;
 var checkSpecial;
 
 
@@ -62,26 +62,26 @@ function showUppercase(){
 
 //check to see if user wants to use numbers in the password
 function addNumbers(){
-  numbers = prompt("Numbers in your password? \n(Yes or No)");
-    numbers = numbers.toLowerCase();
+  numberCheck = prompt("Numbers in your password? \n(Yes or No)");
+    numberCheck = nnumberCheck.toLowerCase();
 
-    if (numbers === null || numbers === ""){
+    if (numberCheck === null || numberCheck === ""){
       alert("Yes or No");
       addNumbers();
 
-    }else if (numbers === "yes" || numbers ==="y"){
-      numbers = true;
-      return numbers;
+    }else if (numberCheck === "yes" || numberCheck ==="y"){
+      numberCheck = true;
+      return numberCheck;
 
-    }else if (numbers === "no" || numbers ==="n"){
-      numbers = false;
-      return numbers;
+    }else if (numberCheck === "no" || numberCheck ==="n"){
+      numberCheck = false;
+      return numberCheck;
     
     }else {
       alert("Yes or No");
       addNumbers();
     }
-    return numbers;
+    return numberCheck;
 }
 
 //Function to see if user wants special char
@@ -134,7 +134,9 @@ function generatePassword(){
 
   }else if(checkUppercase){
     characters += uppercase;
-    
+
+  }else if(numbers){
+
   }
 
 
