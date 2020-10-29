@@ -38,7 +38,26 @@ function chooseLenght(){
   //function to see if they want uppercase
 function uppercaseCheck(){
   checkUppercase = prompt("Would you like uppercare letters?  \n(Yes or No");
-    checkUppercase = checkUppercase.toLocaleLowerCase()
+    checkUppercase = checkUppercase.toLocaleLowerCase();
+
+    //makes sure you answer the question
+    if (checkUppercase === null || checkUppercase ===""){
+      alert("Yes or No");
+      uppercaseCheck();
+
+    }else if (checkUppercase === "yes" || checkUppercase ==="y"){
+      checkUppercase = true;
+      return checkUppercase;
+
+    }else if (checkUppercase === "no" || checkUppercase ==="n"){
+      checkUppercase = false;
+      return checkUppercase;
+    }else {
+      alert("Please answer Yes or No");
+      uppercaseCheck();
+    }
+    return checkUppercase;
+
 }
 
 
