@@ -4,8 +4,8 @@
 
  
 
-![](images/filename Screen_Shot1.png) 
-![](/images/Screen_Shot2.png) 
+![Password Generator](/images/Screen_Shot1.png) 
+![first question](/images/Screen_Shot2.png) 
 
 
  
