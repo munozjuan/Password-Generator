@@ -35,9 +35,7 @@
 ## Description  
 
  
-
-I created a website using Bootstrap and JavaScript that allows me to have a responsive portfolio. This allows you to have the website in various sizes. In the About me section I added a navigation bar at the top that displays my name and links to go to my portfolio, contact page, or back to home. In the about me section I was about to make sure the image was wrapped around a brief about me section. In the contact section I was able to make a form that allows you to enter your name, email address, and lastly a message. Then you would be able to submit this. 
-
+Dealing with sensitive data, as an employee, I was tasked to make a password generator that would randomly generate a random password. Using certain criteria I wanted to make passwords for users that provide greater security. I want to ask the user to first choose the length of their password; in this case it will be a number between 8-128. I will use a button that will prompt the user to answer these questions. The next question is going to be if they want to use uppercase letter and if they choose no they will only get lower case. I will ask if they want numbers or special characters. If they choose no to all of those they will only receive lower case passwords. Then they will see their secure password generated. 
  
 
 #### Technologies 
@@ -46,7 +44,7 @@ I created a website using Bootstrap and JavaScript that allows me to have a resp
 
 - HMTL 
 
-- BootStarp
+- CSS
 
 - JavaScript
 
@@ -96,7 +94,8 @@ I created a website using Bootstrap and JavaScript that allows me to have a resp
 
  
 
-- Website - [Juan Munoz]( https://github.com/munozjuan) 
+- Website - [JuanMunoz]( https://github.com/munozjuan) 
+-link - [password](file:///Users/juanmunoz/Documents/fullstack/Password-Generator/index.html)
 
  
 
