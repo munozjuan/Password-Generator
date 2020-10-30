@@ -45,11 +45,11 @@ function showUppercase(){
       alert("Would you like uppercare letters?\n(Yes or No)" ); // asks again if user tries to submit before choosing yes or no
       showUppercase();
 
-    }else if (checkUppercase === "yes" || checkUppercase ==="y"){
+    }else if (checkUppercase === "yes" || checkUppercase ==="y"){ // checks to see if user states yes === is a strictequality operator
       checkUppercase = true;
       return checkUppercase;
 
-    }else if (checkUppercase === "no" || checkUppercase ==="n"){
+    }else if (checkUppercase === "no" || checkUppercase ==="n"){ // checks to see if user states no
       checkUppercase = false;
       return checkUppercase;
     }else {
@@ -63,9 +63,8 @@ function showUppercase(){
 //check to see if user wants to use numbers in the password
 function addNumbers(){
   numberCheck = prompt("Numbers in your password? \n(Yes or No)");
-    numberCheck = numberCheck.toLowerCase();
-
-    if (numberCheck === null || numberCheck === ""){
+    numberCheck = numberCheck.toLowerCase();//this method converts a string to lowercase letters
+    if (numberCheck === null || numberCheck === ""){ //null represents the intentional absence of any object value/ this is treated as falsy for boolean operations
       alert("Numbers in your password? \n(Yes or No)");
       addNumbers();
 
