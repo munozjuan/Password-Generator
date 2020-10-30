@@ -42,7 +42,7 @@ function showUppercase(){
 
     //makes sure you answer the question
     if (checkUppercase === null || checkUppercase ===""){
-      alert("Yes or No");
+      alert("Would you like uppercare letters?\n(Yes or No)" ); // asks again if user tries to submit before choosing yes or no
       showUppercase();
 
     }else if (checkUppercase === "yes" || checkUppercase ==="y"){
@@ -53,7 +53,7 @@ function showUppercase(){
       checkUppercase = false;
       return checkUppercase;
     }else {
-      alert("Would you like uppercare letters?  \n(Yes or No)");
+      alert("Would you like uppercare letters?  \n(Yes or No)"); //re-asking the question if user types something other than "yes" or "no"
       showUppercase();
     }
     return checkUppercase;
@@ -66,7 +66,7 @@ function addNumbers(){
     numberCheck = numberCheck.toLowerCase();
 
     if (numberCheck === null || numberCheck === ""){
-      alert("Yes or No");
+      alert("Numbers in your password? \n(Yes or No)");
       addNumbers();
 
     }else if (numberCheck === "yes" || numberCheck ==="y"){
@@ -90,7 +90,7 @@ function determineSpecial(){
     checkSpecial = checkSpecial.toLowerCase();
 
     if (checkSpecial === null || checkSpecial === ""){
-      alert("Please answer Yes or No");
+      alert("Do you want to include special characters in your password? \n(Yes or No)");
       determineSpecial();
 
     }else if (checkSpecial === "yes" || checkSpecial ==="y"){
@@ -158,10 +158,10 @@ function generatePassword(){
 // Write password to the #password input
 
 function writePassword() {
-  var password1 = "";
-  password1 = generatePassword();
+  var passwordNew = "";
+  passwordNew = generatePassword();
   var passwordText = document.querySelector("#password");
-  passwordText.value = password1;
+  passwordText.value = passwordNew;
 }
 
 // Add event listener to generate button
