@@ -13,7 +13,7 @@ var checkSpecial;
 
 //first I want to make sure I ask for the length of the password
 function chooseLenght(){
-  passwordLength = prompt("How many characters would you like your password to be? (between 8-128 characters)  ");
+  passwordLength = prompt("How many characters would you like your password to be? (between 8-128 characters)");
 
   //if statement to check length is between 8-128 
   //first I must check it should not be less than 8
@@ -53,7 +53,7 @@ function showUppercase(){
       checkUppercase = false;
       return checkUppercase;
     }else {
-      alert("Yes or No");
+      alert("Would you like uppercare letters?  \n(Yes or No)");
       showUppercase();
     }
     return checkUppercase;
@@ -78,7 +78,7 @@ function addNumbers(){
       return numberCheck;
     
     }else {
-      alert("Yes or No");
+      alert("Numbers in your password? \n(Yes or No)");
       addNumbers();
     }
     return numberCheck;
@@ -102,7 +102,7 @@ function determineSpecial(){
       return checkSpecial;
     
     }else {
-      alert("Please answer Yes or No");
+      alert("Do you want to include special characters in your password? \n(Yes or No)");
       determineSpecial();
     }
     return checkSpecial;
