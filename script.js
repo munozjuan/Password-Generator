@@ -107,7 +107,7 @@ function determineSpecial(){
     return checkSpecial;
 }
 
-// function to generate password
+// this function generates a password and checks the criteria the user has chosen
 function generatePassword(){
   chooseLenght();
   console.log(passwordLength);
@@ -120,7 +120,7 @@ function generatePassword(){
 
   //use if & else if statments to make new password
 
-  var characters = lowercase;
+  var characters = lowercase; 
   var password = "";
   if(checkUppercase && numberCheck && checkSpecial){
     characters += uppercase + numbers + specialCharacter;
@@ -157,10 +157,10 @@ function generatePassword(){
 // Write password to the #password input
 
 function writePassword() {
-  var passwordNew = "";
-  passwordNew = generatePassword();
+  var password = "";
+  password = generatePassword();
   var passwordText = document.querySelector("#password");
-  passwordText.value = passwordNew;
+  passwordText.value = password;
 }
 
 // Add event listener to generate button
