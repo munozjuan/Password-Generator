@@ -4,13 +4,13 @@
 
  
 
-![Project Image](file:///Users/juanmunoz/Documents/fullstack/Password-Generator/Screen_Shot1.png) 
-!![Project Image](file:///Users/juanmunoz/Documents/fullstack/Password-Generator/Screen_Shot2.pngScreen_Shot2.png) 
+![Project Image](/images/Screen_Shot1.png) 
+!![Project Image](/images/Screen_Shot2.png) 
 
 
  
 
->Password Generator using JavaScript 
+>Password Generator using JavaSript 
 
  
 --- 
